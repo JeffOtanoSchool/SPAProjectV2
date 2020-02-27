@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Grocery Buddy</title>
+
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <script src="/public/javascripts/index.js"></script>
+    <link rel="stylesheet" type="text/css" href="/public/stylesheets/style.css">
+</head>
+
+
+<body>
+
+    <div data-role="page" id="home">
+        <div data-role="header" data-theme="b">
+            <h1>Next stop, Grocery Store!</h1>
+            <div data-role="navbar" data-theme="c">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#addGrocery">Add Grocery</a></li>
+                    <li><a href="#sortOrder">Sort List</a></li>
+                    <li><a href="#recipes">Compare Recipes</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div data-role="content" data-theme="e">
+            <h2>Let's do some groceries!</h2>
+        </div>
+
+        <div data-role="footer" data-theme="b">
+            <h1>Copyright 2020 by Jeff Otano</h1>
+        </div>
+    </div>
+
+    <div data-role="page" id="addGrocery">
+        <div data-role="header" data-theme="b">
+            <h1>Next stop, Grocery Store!</h1>
+            <div data-role="navbar" data-theme="c">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#addGrocery">Add Grocery</a></li>
+                    <li><a href="#sortOrder">Sort List</a></li>
+                    <li><a href="#recipes">Compare Recipes</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div data-role="content" data-theme="e">
+            Enter your item <br />
+            <input type="text" value="" id="itemName" />
+            <form>
+                <div class="ui-field-contain">
+                    <label for="select-type">Select item type</label>
+                    <select name="select-type" id="select-type">
+                        <option value="Vegetable">Vegetable</option>
+                        <option value="Fruit">Fruit</option>
+                        <option value="Meat">Meat</option>
+                        <option value="Dairy">Dairy</option>
+                        <option value="Bread">Bread</option>
+                        <option value="Dried/Canned">Dried/Canned</option>
+                        <option value="Extraneous">Extraneous</option>
+                    </select>
+                </div>
+            </form>
+            <form>
+                <div class="ui-field-contain">
+                    <label for="select-priority">Select item priority</label>
+                    <select name="select-priority" id="select-priority">
+                        <option value="Vegetable">Low</option>
+                        <option value="Fruit">Medium</option>
+                        <option value="Meat">High</option>
+                    </select>
+                </div>
+            </form>
+            Enter item anticipated cost <br />
+            <input type="text" value="" id="itemCost" />
+            Enter item quantity <br />
+            <input type="text" value="" id="quantity" />
+
+            <input type="button" value="Click to add item" id="buttonAdd" />
+            <input type="button" value="Click to clear form" id="buttonClear" />
+        </div>
+
+        <div data-role="footer" data-theme="b">
+            <h1>Copyright 2020 by Jeff Otano</h1>
+        </div>
+    </div>
+
+
+    <div data-role="page" id="sortOrder">
+        <div data-role="header" data-theme="b">
+            <h1>Next stop, Grocery Store!</h1>
+            <div data-role="navbar" data-theme="c">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#addGrocery">Add Grocery</a></li>
+                    <li><a href="#sortOrder">Sort List</a></li>
+                    <li><a href="#recipes">Compare Recipes</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div data-role="content" data-theme="e">
+            <p>
+                Here are your groceries!
+            </p>
+            <div id="divUserList"></div>
+
+            <input type="button" value="Sort by type" id="buttonSortType" data-inline="true" />
+            <input type="button" value="Sort alphabetically" id="buttonSortAlph" data-inline="true" />
+            <br />
+        </div>
+
+
+        <div data-role="footer" data-theme="b">
+            <h1>Copyright 2020 by Jeff Otano</h1>
+        </div>
+    </div>
+
+    <div data-role="page" id="recipes">
+        <div data-role="header" data-theme="b">
+            <h1>Next stop, Grocery Store!</h1>
+            <div data-role="navbar" data-theme="c">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#addGrocery">Add Grocery</a></li>
+                    <li><a href="#sortOrder">Sort List</a></li>
+                    <li><a href="#recipes">Compare Recipes</a></li>
+                </ul>
+            </div>
+        </div>
+        <div>
+            <ul data-role="listview" data-inset="true">
+                <li><a href="#">
+                        <h2>Vegan Thai Noodles</h2>
+                        <p>Perfect noodles without the guilt</p>
+                        <p class="ui-li-aside">Thai Noodles</p>
+                    </a></li>
+                <li><a href="#">
+                        <h2>Healthy Chicken and chips</h2>
+                        <p>Seasoned potatoes with an oven backed chicken</p>
+                        <p class="ui-li-aside">Garlic Chicken</p>
+                    </a></li>
+                <li><a href="#">
+                        <h2>Low Carb Burger!</h2>
+                        <p>All the meat no buns</p>
+                        <p class="ui-li-aside">Guilt free burger</p>
+                    </a></li>
+            </ul>
+        </div>
+
+    </div>
+
+    <div data-role="footer" data-theme="b">
+        <h1>Copyright 2020 by Jeff Otano</h1>
+    </div>
+    </div>
+
+
+
+</body>
